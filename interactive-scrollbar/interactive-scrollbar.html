@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>GLobe</title>
+        <link href="interactive-scrollbar.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="top-bar">
+            
+            <div><a id="t">Home</a></div>
+            <div><a id="t">About</a></div>
+            <div><a id="t">Services</a></div>
+            <div><a id="t">Contact</a></div>
+        
+        </div>
+        <h2 id="text1">list:</h2>
+        <hr id="line1">
+        <div id="overlay"></div>
+        <div id="box">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+            <div id="box7"></div>
+            <div id="box8"></div>
+            <div id="box9"></div>
+            <div id="box10"></div>
+            <div id="box11"></div>
+            <div id="box12"></div>
+            <div id="box13"></div>
+        <script>
+            for (let i = 1; i <= 12; i++) {
+                document.getElementById(`box${i}`).addEventListener("mouseover", function() {
+                    let box = document.getElementById(`box${i+1}`);
+                    let box1 = document.getElementById(`box${i-1}`);
+                    let box2 = document.getElementById(`box${i}`);
+                    box.classList.add("hover");
+                    box2.classList.add("hover1");
+                    box1.classList.add("hover");
+    
+                }
+            )};
+
+            for (let i = 1; i <= 12; i++) {
+                document.getElementById(`box${i}`).addEventListener("mouseout", function() {
+                    let box = document.getElementById(`box${i+1}`);
+                    let box1 = document.getElementById(`box${i-1}`);
+                    let box2 = document.getElementById(`box${i}`);
+                    box.classList.remove("hover");
+                    box2.classList.remove("hover1");
+                    box1.classList.remove("hover");
+                    
+                }
+            )};
+            document.querySelector("#box").addEventListener("wheel", function(event) {
+            event.preventDefault(); 
+            this.scrollLeft += event.deltaY*3; 
+            });         
+        </script>
+        </div>
+    </body>
+</html>
