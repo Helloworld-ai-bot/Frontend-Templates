@@ -1,0 +1,29 @@
+body{
+    background-color: grey;
+    background-image: url(amazing_mountain_landscape_2-wallpaper-3554x1999.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}   
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+.screen{
+    background-color: rgba(224, 224, 224, 0.301);
+    width: 380px;
+    height: 380px;
+    transition: .3s ease-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.596);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.26);
+    border-radius: 15px;
+    border: solid 1px ;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.863);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 30px;
+}
